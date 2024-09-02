@@ -1,3 +1,6 @@
+import sys
+
+
 def encode_morse(s):
     assert isinstance(s, str), "Argument should be a string"
 
@@ -16,12 +19,14 @@ def encode_morse(s):
 
     morse_code = ''
     for char in s.upper():
-        morse_code += morse_code_dict[char] + ' '
+        if char not in morse_code_dict:
+            raise AssertionError("the arguments are bad")
+        else:
+            morse_code += morse_code_dict[char] + ' '
 
     return morse_code.strip()
 
 
 if __name__ == "__main__":
-    import sys
     assert len(sys.argv) == 2, "The number of arguments should be 1"
     print(encode_morse(sys.argv[1]))
