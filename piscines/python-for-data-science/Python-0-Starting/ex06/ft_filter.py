@@ -13,4 +13,4 @@ def ft_filter(function, iterable):
     # Use list comprehension to filter elements based on the function's result
     return [item for item in iterable if function(item)]
 
-print(ft_filter.__doc__)
+# print(ft_filter.__doc__)
