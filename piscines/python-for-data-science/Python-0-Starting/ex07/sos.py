@@ -1,5 +1,8 @@
 import sys
 
+'''
+This function takes a string as input and returns the morse code of the string.
+'''
 
 def encode_morse(s):
     assert isinstance(s, str), "Argument should be a string"
