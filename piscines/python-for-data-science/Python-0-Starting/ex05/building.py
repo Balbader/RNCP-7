@@ -1,6 +1,15 @@
 import sys
 import string
 
+'''
+    # Initialize counters
+    # Analyze each character in the input string
+    # Print the results
+    # Check the number of arguments provided
+    # If no arguments or None is provided, prompt the user for input
+    # Analyze the provided input string
+
+'''
 
 def analyze_string(input_string):
     # Initialize counters
