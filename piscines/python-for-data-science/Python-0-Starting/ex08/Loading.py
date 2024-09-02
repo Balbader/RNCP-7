@@ -15,7 +15,7 @@ def ft_tqdm(lst: range) -> None:
         bar = '=' * int(bar_length * progress) + '-' * (bar_length - int(bar_length * progress))
 
         # Print the progress bar
-        sys.stdout.write(f'\r|{bar}| {percent:.2f}% Elapsed Time: {elapsed_time:.2f}s')
+        sys.stdout.write(f'\r{percent:.2f}%|{bar}|Elapsed Time: {elapsed_time:.2f}s')
         sys.stdout.flush()
 
         yield item  # Yield the current item
@@ -25,3 +25,5 @@ def ft_tqdm(lst: range) -> None:
 
 # Example usage
 if __name__ == "__main__":
+    for i in ft_tqdm(range(100)):
+        time.sleep(0.1)  # Simulate some work
