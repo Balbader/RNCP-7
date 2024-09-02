@@ -24,11 +24,11 @@ def analyze_string(input_string):
             space_count += 1
 
     # Print the results
-    print(f"Upper-case characters: {uppercase_count}")
-    print(f"Lower-case characters: {lowercase_count}")
-    print(f"Punctuation characters: {punctuation_count}")
-    print(f"Digits: {digit_count}")
-    print(f"Spaces: {space_count}")
+    print(f"{uppercase_count} upper letters")
+    print(f"{lowercase_count} lower letters")
+    print(f"{punctuation_count} punctuation marks")
+    print(f"{space_count} spaces")
+    print(f"{digit_count} digits")
 
 
 def main():
