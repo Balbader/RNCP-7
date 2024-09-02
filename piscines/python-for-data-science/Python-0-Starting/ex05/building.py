@@ -11,6 +11,7 @@ import string
 
 '''
 
+
 def analyze_string(input_string):
     # Initialize counters
     uppercase_count = 0
