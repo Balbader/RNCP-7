@@ -7,7 +7,7 @@ setup(
     description='A simple test package',
     author='Your Name',
     author_email='baalbade@strudent.42.fr',
-    url='https://github.com/balbader/mypackage',  # URL to the repository
+    url='https://github.com/balbader/mypackage',
     License='MIT',
     classifiers=[
         'Programming Language :: Python :: 3',
