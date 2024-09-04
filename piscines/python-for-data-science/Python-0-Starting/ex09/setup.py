@@ -4,10 +4,10 @@ setup(
     name='ft_package',
     version='0.0.1',
     packages=find_packages(),
-    description='A simple test package',
-    author='Your Name',
+    description='A sample test package',
+    author='Basil Albader',
     author_email='baalbade@strudent.42.fr',
-    url='https://github.com/balbader/mypackage',
+    url='https://github.com/Balbader/RNCP-7/tree/main/piscines/python-for-data-science/Python-0-Starting/ex09',
     License='MIT',
     classifiers=[
         'Programming Language :: Python :: 3',
