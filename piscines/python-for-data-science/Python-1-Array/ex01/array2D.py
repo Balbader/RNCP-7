@@ -34,3 +34,18 @@ def slice_me(family: list, start: int, end: int) -> list:
 
     # Return the truncated version of the array
     return [person[start:end] for person in family]
+
+
+def main():
+    family = [[1.80, 78.4],
+              [2.15, 102.7],
+              [2.10, 98.5],
+              [1.88, 75.2]]
+
+    print("print 1: ", slice_me(family, 0, 2))
+    print("\n")
+    print("print 2: ", slice_me(family, 1, -2))
+
+
+if __name__ == "__main__":
+    main()
