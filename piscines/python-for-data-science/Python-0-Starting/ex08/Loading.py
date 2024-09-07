@@ -19,7 +19,8 @@ def ft_tqdm(lst: range) -> None:
         progress = (i + 1) / total
         percent = progress * 100
         bar_length = 50
-        bar = '=' * int(bar_length * progress) + '-' * (bar_length - int(bar_length * progress))
+        bar = '=' * int(bar_length * progress) +\
+            '-' * (bar_length - int(bar_length * progress))
 
         # Print the progress bar
         sys.stdout.write(f'\r{percent:.0f}%|{bar}| {total:.0f}/{total:.0f}')
