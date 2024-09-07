@@ -1,3 +1,7 @@
+import numpy as np
+
+
+
 def slice_me(family: list, start: int, end: int) -> list:
     '''
     This function takes a 2D array and two integers as
@@ -7,32 +11,18 @@ def slice_me(family: list, start: int, end: int) -> list:
     The input array is a list of lists, where each list represents a person
     and contains the height and weight of the person.
     '''
-    # Check if family is a list
-    # Check if start and end are integers
-    if not isinstance(family, list) \
-            or not isinstance(start, int) or not isinstance(end, int):
-        raise TypeError("Imput must be a list and 2 integers")
-
-    # Check if all elements in family are lists
-    if not all(isinstance(person, list) for person in family):
-        raise TypeError("all elements in family must be lists")
-
-    # Check if all lists in family have the same length
-    if len(set(len(person) for person in family)) != 1:
-        raise ValueError("all lists in family must have the same length")
-
-    # Check if start and end are within the valid range
-    if start < 0 or end > len(family[0]):
-        raise ValueError("start must be non-negative and\
-        end must be less than or equal to the\
-        length of the lists in family")
-
-    # Print the shape of the array
-    print("My shape is : ", "(", len(family), ",", len(family[0]), ")")
-    print("My new shape is : ", "(", len(family) - 1, ",", len(family[0]), ")")
-
-    # Return the truncated version of the array
-    return [person[start:end] for person in family]
+    try:
+        if not isinstance(family, list) \
+                or not isinstance(start, int) or not isinstance(end, int):
+            raise AssertionError("Input must be a list and 2 integer.")
+        if not all(len(item) == len(family[0]) for item in family):
+            raise AssertionError("Input list with different sizes.")
+        print(f"My shape is : {np.array(family).shape}")
+        print(f"My new shape is : {np.array(family)[start:end+1].shape}")
+        return np.array(family)[start:end].tolist()
+    except AssertionError as error:
+        print("\033[31m", AssertionError.__name__ + ":", error, "\033[0m")
+        return ""
 
 
 def main():
