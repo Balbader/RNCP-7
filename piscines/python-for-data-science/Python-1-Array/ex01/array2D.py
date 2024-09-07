@@ -45,6 +45,7 @@ def main():
     print("print 1: ", slice_me(family, 0, 2))
     print("\n")
     print("print 2: ", slice_me(family, 1, -2))
+    print(slice_me.__doc__)
 
 
 if __name__ == "__main__":
