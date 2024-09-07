@@ -2,6 +2,7 @@ import sys
 
 '''
 This function takes a string as input and returns the morse code of the string.
+The function should raise an AssertionError if the argument is not a string.
 '''
 
 def encode_morse(s):
