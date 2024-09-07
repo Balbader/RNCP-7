@@ -1,5 +1,6 @@
-def give_bmi(height: list[int | float],
-             weight: list[int | float]) -> list[int | float]:
+def give_bmi(
+        height: list[int | float],
+        weight: list[int | float]) -> list[int | float]:
     '''
     give_bmi.doc
 
@@ -40,6 +41,7 @@ def main():
     bmi = give_bmi(height, weight)
     print(bmi, type(bmi))
     print(apply_limit(bmi, 26))
+
 
 if __name__ == '__main__':
     main()

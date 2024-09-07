@@ -6,5 +6,5 @@ family = [[1.80, 78.4],
           [1.88, 75.2]]
 
 print("print 1: ", slice_me(family, 0, 2))
-print("\n");
+print("\n")
 print("print 2: ", slice_me(family, 1, -2))
