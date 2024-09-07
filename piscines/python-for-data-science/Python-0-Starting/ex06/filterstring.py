@@ -23,7 +23,8 @@ def main():
     try:
         N = int(sys.argv[2])
     except ValueError:
-        raise AssertionError("AssertionError: The second argument must be an integer.")
+        raise AssertionError("AssertionError: \
+                            The second argument must be an integer.")
 
     # Ensure the first argument is a string
     assert isinstance(S, str)
@@ -31,7 +32,9 @@ def main():
 
     # Use list comprehension and a lambda
     # to filter words longer than N characters
-    result = list(ft_filter(lambda word: len(word) > N, [word for word in S.split()]))
+    result = list(
+        ft_filter(lambda word: len(word) > N, [word for word in S.split()])
+    )
 
     # Print the result
     print(result)
