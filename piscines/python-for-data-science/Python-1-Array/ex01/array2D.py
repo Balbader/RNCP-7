@@ -8,8 +8,10 @@ def slice_me(family: list, start: int, end: int) -> list:
     and contains the height and weight of the person.
     '''
     # Check if family is a list
-    if not isinstance(family, list):
-        raise TypeError("family must be a list")
+    # Check if start and end are integers
+    if not isinstance(family, list) \
+            or not isinstance(start, int) or not isinstance(end, int):
+        raise TypeError("Imput must be a list and 2 integers")
 
     # Check if all elements in family are lists
     if not all(isinstance(person, list) for person in family):
@@ -19,10 +21,6 @@ def slice_me(family: list, start: int, end: int) -> list:
     if len(set(len(person) for person in family)) != 1:
         raise ValueError("all lists in family must have the same length")
 
-    # Check if start and end are integers
-    if not isinstance(start, int) or not isinstance(end, int):
-        raise TypeError("start and end must be integers")
-
     # Check if start and end are within the valid range
     if start < 0 or end > len(family[0]):
         raise ValueError("start must be non-negative and\
@@ -31,6 +29,7 @@ def slice_me(family: list, start: int, end: int) -> list:
 
     # Print the shape of the array
     print("My shape is : ", "(", len(family), ",", len(family[0]), ")")
+    print("My new shape is : ", "(", len(family) - 1, ",", len(family[0]), ")")
 
     # Return the truncated version of the array
     return [person[start:end] for person in family]
