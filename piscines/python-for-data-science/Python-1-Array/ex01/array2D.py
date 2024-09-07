@@ -1,7 +1,6 @@
 import numpy as np
 
 
-
 def slice_me(family: list, start: int, end: int) -> list:
     '''
     This function takes a 2D array and two integers as
@@ -18,7 +17,7 @@ def slice_me(family: list, start: int, end: int) -> list:
         if not all(len(item) == len(family[0]) for item in family):
             raise AssertionError("Input list with different sizes.")
         print(f"My shape is : {np.array(family).shape}")
-        print(f"My new shape is : {np.array(family)[start:end+1].shape}")
+        print(f"My new shape is : {np.array(family)[start:end].shape}")
         return np.array(family)[start:end].tolist()
     except AssertionError as error:
         print("\033[31m", AssertionError.__name__ + ":", error, "\033[0m")
@@ -39,5 +38,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# NOTE: The code above needs to be refactored as the output is not as expected.
