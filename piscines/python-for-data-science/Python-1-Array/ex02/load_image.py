@@ -3,6 +3,14 @@ import numpy as np
 
 
 def ft_load(path: str) -> np.ndarray:
+    """
+    This function takes a path to an image file as input and returns
+    a NumPy array containing the pixel content of the image.
+    The function first opens the image file and checks if the image
+    is in JPG or JPEG format. If not, it raises a ValueError.
+    The function then converts the image to RGB format if it is not already.
+    The function then converts the image into a NumPy array and returns it.
+    """
     try:
         # Open the image file
         with Image.open(path) as img:
