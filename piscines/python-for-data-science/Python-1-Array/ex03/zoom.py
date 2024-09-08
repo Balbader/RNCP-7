@@ -1,5 +1,7 @@
 from load_image import ft_load
+from PIL import Image
 import numpy as np
+import matplotlib.pyplot as plt
 
 def zoom_image(image: np.ndarray, zoom_factor: int) -> np.ndarray:
     """
