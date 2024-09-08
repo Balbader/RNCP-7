@@ -3,6 +3,17 @@ import numpy as np
 
 
 def ft_load(path: str) -> np.ndarray:
+    """
+    Load an image from a file and return its pixel content as a NumPy array.
+    Args:
+        path (str): The path to the image file.
+    Returns:
+        np.ndarray: The pixel content of the image as a NumPy array.
+    Raises:
+        FileNotFoundError: If the file is not found.
+        ValueError: If the image format is not supported.
+        Exception: For any other unexpected error.
+    """
     try:
         # Open the image file
         with Image.open(path) as img:
