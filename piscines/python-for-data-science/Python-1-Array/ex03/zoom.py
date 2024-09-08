@@ -33,5 +33,6 @@ def zoom_image(image: np.ndarray, zoom_factor: int) -> np.ndarray:
 
 if __name__ == "__main__":
 	image = ft_load("animal.jpeg")
+	print(image)
 	zoomed_image = zoom_image(image, 3)
 	print(zoomed_image.shape)
